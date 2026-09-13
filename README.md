@@ -4,6 +4,8 @@ Kutatási Projekt & Szoftverarchitektúra – TUDOK XXIV. Kárpát-medencei Konf
 
 Ez a projekt egy nulláról felépített, két rétegű, többszálú 3D-s fizikai szimulációs keretrendszer, amely a közegellenállás (szabadesés, ferde hajítás, műholdak keringése) valós idejű modellezésére készült. A szoftver egyedisége, hogy a Processing 4 alapjaira építkezve egy saját fejlesztésű grafikus felhasználói felületet (UI), aszinkron erőforráskezelőt és komplex, többszálú fizikai szimulációt valósít meg. A szimuláció pontosságát valós kísérletekkel (pl. különböző labdák tízemeletes épületből történő leejtésével) validáltuk, tizedesjegy-pontosságú egyezést elérve a mért és a számított adatok között.
 
+[![Szabadesés](https://img.youtube.com/vi/wlFaJQsYqsk/maxresdefault.jpg)](https://youtu.be/wlFaJQsYqsk)
+
 ## 1. Technikai felépítés és Főbb modulok
 
 A szoftver robusztus, moduláris architektúrával rendelkezik, amely elválasztja a logikát, a megjelenítést és az adatkezelést.
