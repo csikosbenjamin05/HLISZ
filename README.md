@@ -6,7 +6,7 @@ Ez a projekt egy nulláról felépített, két rétegű, többszálú 3D-s fizik
 
 
 
-### Szabadesés
+### Szabadesés ( videó )
 [![Szabadesés](https://img.youtube.com/vi/wlFaJQsYqsk/maxresdefault.jpg)](https://youtu.be/wlFaJQsYqsk)
 
 
