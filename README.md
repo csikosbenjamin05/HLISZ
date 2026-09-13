@@ -6,7 +6,7 @@ Ez a projekt egy nulláról felépített, két rétegű, többszálú 3D-s fizik
 
 
 
-
+### Szabadesés
 [![Szabadesés](https://img.youtube.com/vi/wlFaJQsYqsk/maxresdefault.jpg)](https://youtu.be/wlFaJQsYqsk)
 
 
@@ -24,12 +24,12 @@ A szoftver robusztus, moduláris architektúrával rendelkezik, amely elválaszt
 * **Erőforráskezelő (`base3D.resources`):** A `ResourceManager` felelős a textúrák, hangok és 3D modellek memóriatakarékos és aszinkron betöltéséért. A rendszer egy XML konfigurációs fájlból (`resources.xml`) olvassa ki a szükséges elemeket, kiküszöbölve a redundáns fájlbetöltéseket és biztosítva a memóriaszivárgás-mentes működést.
 
 
-
+### Ferde hajítás
 [![Ferde hajítás](https://img.youtube.com/vi/Mpk_MQRIKak/maxresdefault.jpg)](https://youtu.be/Mpk_MQRIKak)
 
 
 
-## 2. A Többszálú (Multi-threading) működés kialakítása
+## 2. A Többszálú működés kialakítása
 
 A szoftver egyik legnagyobb technikai kihívása és erőssége az egyedi szálkezelés, amelyet a `ThreadController` fog össze. A teljesítmény maximalizálása és a fő szál (renderelés) tehermentesítése érdekében a rendszer több szálon operál:
 
@@ -42,12 +42,12 @@ A szoftver egyik legnagyobb technikai kihívása és erőssége az egyedi szálk
 * **Taszk Szálak (`TaskThread`):** A nehéz műveletek – mint a komplex 3D hálók (Mesh) generálása (`ShapeGeneratorThread`), vagy a textúrák fájlrendszerből történő beolvasása (`ResourceLoaderThread`) – háttérszálakon történnek aszinkron módon, kiküszöbölve az alkalmazás megakadását.
 
 
-
+### Testek keringése
 [![Testek keringése](https://img.youtube.com/vi/fKBzLqXPoYg/maxresdefault.jpg)](https://youtu.be/fKBzLqXPoYg)
 
 
 
-## 3. Felhasznált Tervezési Minták (Design Patterns)
+## 3. Felhasznált Tervezési Minták
 
 A kód minőségét és skálázhatóságát szoftvertervezési minták tudatos alkalmazása biztosítja:
 
@@ -63,7 +63,7 @@ A kód minőségét és skálázhatóságát szoftvertervezési minták tudatos 
 * **Factory / Builder (Építő):** A `ShapeGenerator` leszármazottak (pl. `MeshShapeGenerator`, `SphereShapeGenerator`) felelősek a komplex 3D alakzatok paraméterezhető legyártásáért.
 
 
-
+### Keringés csökkenő sebességgel
 [![Keringés csökkenő sebességgel](https://img.youtube.com/vi/SoBM0i-LxDQ/maxresdefault.jpg)](https://youtu.be/SoBM0i-LxDQ)
 ---
 
