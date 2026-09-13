@@ -1,0 +1,52 @@
+ <resources>
+     <scene name="MainMenu">
+            <textures>
+                <cube>skybox/skybox.png</cube>
+            </textures>
+            <sounds>
+
+            </sounds>
+            <shapes>
+
+            </shapes>
+     </scene>
+
+     <scene name="FreeFall">
+         <textures>
+             <cube>skybox/skybox.png</cube>
+             <image>tiles/grass.png</image>
+         </textures>
+         <sounds>
+
+         </sounds>
+         <shapes>
+
+         </shapes>
+     </scene>
+
+     <scene name="Throw">
+         <textures>
+             <cube>skybox/skybox.png</cube>
+             <image>tiles/grass.png</image>
+         </textures>
+         <sounds>
+
+         </sounds>
+         <shapes>
+
+         </shapes>
+     </scene>
+
+     <scene name="Satellite">
+         <textures>
+             <cube>skybox/stars.png</cube>
+             <image>tiles/grass.png</image>
+         </textures>
+         <sounds>
+
+         </sounds>
+         <shapes>
+
+         </shapes>
+     </scene>
+ </resources>
