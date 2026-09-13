@@ -4,7 +4,12 @@ Kutatási Projekt & Szoftverarchitektúra – TUDOK XXIV. Kárpát-medencei Konf
 
 Ez a projekt egy nulláról felépített, két rétegű, többszálú 3D-s fizikai szimulációs keretrendszer, amely a közegellenállás (szabadesés, ferde hajítás, műholdak keringése) valós idejű modellezésére készült. A szoftver egyedisége, hogy a Processing 4 alapjaira építkezve egy saját fejlesztésű grafikus felhasználói felületet (UI), aszinkron erőforráskezelőt és komplex, többszálú fizikai szimulációt valósít meg. A szimuláció pontosságát valós kísérletekkel (pl. különböző labdák tízemeletes épületből történő leejtésével) validáltuk, tizedesjegy-pontosságú egyezést elérve a mért és a számított adatok között.
 
+
+
+
 [![Szabadesés](https://img.youtube.com/vi/wlFaJQsYqsk/maxresdefault.jpg)](https://youtu.be/wlFaJQsYqsk)
+
+
 
 ## 1. Technikai felépítés és Főbb modulok
 
@@ -20,6 +25,10 @@ A szoftver robusztus, moduláris architektúrával rendelkezik, amely elválaszt
 
 
 
+[![Ferde hajítás](https://img.youtube.com/vi/Mpk_MQRIKak/maxresdefault.jpg)](https://youtu.be/Mpk_MQRIKak)
+
+
+
 ## 2. A Többszálú (Multi-threading) működés kialakítása
 
 A szoftver egyik legnagyobb technikai kihívása és erőssége az egyedi szálkezelés, amelyet a `ThreadController` fog össze. A teljesítmény maximalizálása és a fő szál (renderelés) tehermentesítése érdekében a rendszer több szálon operál:
@@ -31,6 +40,10 @@ A szoftver egyik legnagyobb technikai kihívása és erőssége az egyedi szálk
 
 
 * **Taszk Szálak (`TaskThread`):** A nehéz műveletek – mint a komplex 3D hálók (Mesh) generálása (`ShapeGeneratorThread`), vagy a textúrák fájlrendszerből történő beolvasása (`ResourceLoaderThread`) – háttérszálakon történnek aszinkron módon, kiküszöbölve az alkalmazás megakadását.
+
+
+
+[![Testek keringése](https://img.youtube.com/vi/fKBzLqXPoYg/maxresdefault.jpg)](https://youtu.be/fKBzLqXPoYg)
 
 
 
@@ -50,6 +63,8 @@ A kód minőségét és skálázhatóságát szoftvertervezési minták tudatos 
 * **Factory / Builder (Építő):** A `ShapeGenerator` leszármazottak (pl. `MeshShapeGenerator`, `SphereShapeGenerator`) felelősek a komplex 3D alakzatok paraméterezhető legyártásáért.
 
 
+
+[![Keringés csökkenő sebességgel](https://img.youtube.com/vi/SoBM0i-LxDQ/maxresdefault.jpg)](https://youtu.be/SoBM0i-LxDQ)
 ---
 
 *Személyes megjegyzés a CV-hez: A projekt során Flóring Balázs a fizikai modellek kidolgozásáért és a valós mérésekért felelt, míg én (Csíkos Benjamin) a szimulációs program architektúráját, a fizikai motor programozását és a grafikus megjelenítést terveztem és kódoltam.*
